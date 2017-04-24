@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/lwxwl/.android/build-cache/bee16dd31337b68465b4f921ebf2a3329d2cdc2c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="781e05d0149f26f73710dcfa7954db5fec176221">
+        <dex dex="/Users/lwxwl/Desktop/CodeForAndroid/MusicPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1f150d545f05d4df730585ecaecffb6a86966af7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lwxwl/Desktop/CodeForAndroid/MusicPlayer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/lwxwl/Desktop/CodeForAndroid/MusicPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fbbbdcdb752e09095d7c916576909ba30adc49c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lwxwl/Desktop/CodeForAndroid/MusicPlayer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2a74c6d03442e069392d3475fe1dec98ef2e3f5d">
+        <dex dex="/Users/lwxwl/Desktop/CodeForAndroid/MusicPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6e5155465cd95260fa89ae7449252ee26d400530/classes.dex" />
+    </item>
+
+</items>
