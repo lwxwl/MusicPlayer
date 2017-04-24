@@ -20,22 +20,14 @@ public class CustomViewPager extends ViewPager {
     }
 
     PointF downPoint = new PointF();     // 触摸时的位置
-    PointF currPoint = new PointF();     // 触摸时当前的位置
     OnSingleTouchListener onSingleTouchListener;
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent motionEvent) {
-        // onTouch拦截在此控件，进而执行此控件的onTouchEvent
-        return true;
-    }
 
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        // 每次onTouch事件都记录当前的坐标
-        currPoint.x = motionEvent.getX();
-        currPoint.y = motionEvent.getY();
         switch (motionEvent.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                // 记录按下时的坐标
                 downPoint.x = motionEvent.getX();
                 downPoint.y = motionEvent.getY();
                 if (this.getChildCount() > 1) {
@@ -50,8 +42,8 @@ public class CustomViewPager extends ViewPager {
                 break;
             case MotionEvent.ACTION_UP:
                 // 判断按下和松手的点坐标是否相同
-                if ((currPoint.x - downPoint.x <= (float) 5.0 && currPoint.x - downPoint.x >= - (float) 5.0)
-                        && (currPoint.y - downPoint.y <= (float) 5.0 && currPoint.y - downPoint.y >= - (float) 5.0)) {
+                if (PointF.length(motionEvent.getX() - downPoint.x, motionEvent.getY()
+                        - downPoint.y) < (float) 5.0) {
                     onSingleTouch(this);
                     return true;
                 }
@@ -66,8 +58,7 @@ public class CustomViewPager extends ViewPager {
         }
     }
 
-    // 创建点击事件接口
-    public interface onSingleTouchListener {
+    public interface OnSingleTouchListener {
         public void onSingleTouch(View view);
     }
 
