@@ -1,70 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.lwxwl.simplemusicplayer.widget.BackgroundRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/activity_main">
+    android:background="@drawable/ic_blackground"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.lwxwl.simplemusicplayer.MainActivity"
+    android:id="@+id/rootLayout">
 
-    <!-- Change color without reload app -->
-    <com.bilibili.magicasakura.widgets.TintToolbar
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/newColorPrimary"
-        android:fitsSystemWindows="true"
-        android:minHeight="?android:attr/actionBarSize"
-        app:contentInsetStart="0.0dp"
-        app:layout_scrollFlags="enterAlways|scroll"
-        >
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        app:titleTextAppearance="@style/music_time_text"
+        app:subtitleTextAppearance="@style/music_time_seek_bar"
+        />
         
-        <RelativeLayout
-            android:gravity="center"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize">
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/view"
+            />
+
+        <include
+            android:id="disc_view"
+            layout="disc_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_above="@id/music_time"
+            />
+
+        <RelativeLayout
+            android:id="@+id/music_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_above="@id/play_option">
             
-            <ImageView
-                android:id="@+id/toolbar_discover"
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/toolbar_discover"
-                android:layout_toLeftOf="@+id/toolbar_music"
-                android:clickable="true"
+            <TextView
+                android:id="@+id/txv_current_time"
+                style="@style/music_time_text"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                tools:text="01:34"
                 />
-            <ImageView
-                android:id="@+id/toolbar_music"
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/toolbar_music"
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/music_time_seek_bar"
                 android:layout_centerInParent="true"
-                android:clickable="true"
+                android:layout_toEndOf="@id/txv_current_time"
+                android:layout_toRightOf="@+id/txv_current_time"
+                android:layout_toStartOf="@+id/txv_total_time"
+                android:layout_toLeftOf="@+id/txv_total_time"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
                 />
-            <ImageView
-                android:id="@+id/toolbar_friends"
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/toolbar_friends"
-                android:layout_toRightOf="@id/toolbar_music"
-                android:clickable="true"
-                />
+
+            <TextView
+                android:id="@+id/txv_total_time"
+                style="@style/music_time_text"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:text="05:34"/>
 
         </RelativeLayout>
 
-    </com.bilibili.magicasakura.widgets.TintToolbar>
+        <LinearLayout
+            android:id="@+id/play_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            >
 
-   <com.example.lwxwl.musicplayer.widget.CustomViewPager
-       android:id="@+id/main_viewpager"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_below="@+id/toolbar"
-       />
-       <!--android:layout_above="@+id/nav_play"-->
+            <ImageView
+                android:id="@+id/img_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_last"
+                />
+
+            <ImageView
+                android:id="@+id/img_play_or_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_play"
+                />
+
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                />
+
+        </LinearLayout>
 
 
-    <FrameLayout
-        android:id="@+id/bottom_container"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        />
 
-</RelativeLayout>
+
+</com.example.lwxwl.simplemusicplayer.widget.BackgroundRelativeLayout>

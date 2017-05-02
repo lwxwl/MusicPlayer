@@ -1,101 +1,39 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:actionOverflowButtonStyle">@style/MyOverflowStyle</item>
-        <item name="android:alertDialogTheme">@style/AppTheme.AppCompat.Dialog.Alert</item>
-        <item name="android:windowBackground">@null</item>
-        <item name="android:windowAnimationStyle">@style/NoAnimation</item>
-        <item name="colorPrimary">@color/newColorPrimary</item>
-        <item name="colorPrimaryDark">@color/newColorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <!-- <item name="android:windowTranslucentStatus">true</item> -->
+
+    <style name="toolbar_title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/toolbar_title</item>
+        <item name="android:textSize">17sp</item>
     </style>
 
-
-    <!-- Toolbar -->
-    <style name="toolbar_theme" parent="Theme.AppCompat">
+    <style name="toolbar_subtitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textColor">@color/toolbar_subtitle</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="actionBarItemBackground">@drawable/toolbarItemBackground</item>
-        <item name="selectableItemBackground">@drawable/toolbarItemBackground</item>
-        <item name="titleTextAppearance">@style/ToolBar.Title</item>
-        <item name="subtitleTextAppearance">@style/Toolbar.SubTitle</item>
-        <item name="android:windowNoTitle">true</item>
+    <style name="music_time_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/music_time_text</item>
+        <item name="android:textSize">9sp</item>
     </style>
 
-    <style name="ToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">17.0sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:ellipsize">marquee</item>
+    <style name="music_time_seek_bar"
+        parent="Widget.AppCompat.SeekBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:thumb">@drawable/ic_seekbar_thumb</item>
     </style>
 
-    <style name="Toolbar.SubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
-        <item name="android:textSize">9.0sp</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-
-
-    <style name="MyOverflowStyle" parent="@android:style/Widget.ActionButton.Overflow">
-        <item name="android:src">@drawable/ic_more_white_24dp</item>
-    </style>
-
-    <style name="AppTheme.AppCompat.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:windowMinWidthMinor">90%</item>
-        <item name="android:windowMinWidthMajor">90%</item>
-        <item name="android:maxWidth">1080dp</item>
-    </style>
-
-    <style name="NoAnimation">
-        <item name="android:activityOpenEnterAnimation">@null</item>
-        <item name="android:activityOpenExitAnimation">@null</item>
-        <item name="android:activityCloseEnterAnimation">@null</item>
-        <item name="android:activityCloseExitAnimation">@null</item>
-        <item name="android:taskOpenEnterAnimation">@null</item>
-        <item name="android:taskOpenExitAnimation">@null</item>
-        <item name="android:taskCloseEnterAnimation">@null</item>
-        <item name="android:taskCloseExitAnimation">@null</item>
-        <item name="android:taskToFrontEnterAnimation">@null</item>
-        <item name="android:taskToFrontExitAnimation">@null</item>
-        <item name="android:taskToBackEnterAnimation">@null</item>
-        <item name="android:taskToBackExitAnimation">@null</item>
-    </style>
-
-    <style name="AnimBottom" parent="@android:style/Animation" type="text/css">
-        <item name="android:windowEnterAnimation">@anim/bottom_push_in</item>
-        <item name="android:windowExitAnimation">@anim/bottom_push_out</item>
-    </style>
-
-
-    <!--  Styles while list popping up -->
-    <style name="FloatDialogBottom" type="text/css">
-        <!-- Animation -->
-        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
-        <!-- Avoid the appearance of the black-line border -->
-        <item name="android:windowContentOverlay">@null</item>
-        <!-- No windowFrame -->
-        <item name="android:windowFrame">@null</item>
-        <!-- Appear on the top of the activity -->
-        <item name="android:windowIsFloating">true</item>
-        <!-- Translucent -->
-        <item name="android:windowIsTranslucent">true</item>
-        <!-- No title -->
-        <item name="android:windowNoTitle">true</item>
-        <!-- Transparent -->
-        <item name="android:windowBackground">@android:color/background_light</item>
-        <!-- Dim -->
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
-
-    <style name="TransparentStyleBottom" parent="@style/AppTheme">
-        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
 
 </resources>

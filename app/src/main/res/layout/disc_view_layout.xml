@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lwxwl.simplemusicplayer.widget.DiscView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_disc_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_disc_contain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+    />
+
+    <ImageView
+        android:id="@+id/img_needle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_needle"
+        />
+
+
+</com.example.lwxwl.simplemusicplayer.widget.DiscView>
