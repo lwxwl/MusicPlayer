@@ -289,7 +289,7 @@ public class DiscView extends RelativeLayout {
     private Drawable getDiscBackgroundDrawable() {
         int discSize = (int) (screenWidth * DisplayUtil.SCALE_DISC_SIZE);
         Bitmap bitmapDisc = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.ic_disc_blackground), discSize, discSize, false);
+                R.drawable.ic_disc_background), discSize, discSize, false);
         RoundedBitmapDrawable roundDiscDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmapDisc);
         return roundDiscDrawable;
     }

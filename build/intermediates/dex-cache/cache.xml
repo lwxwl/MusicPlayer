@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/lwxwl/Desktop/CodeForAndroid/SimpleMusicPlayer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a7007f63b0cbdace55f7ee0dc9640b28fff4ebc9">
+        <dex dex="/Users/lwxwl/Desktop/CodeForAndroid/SimpleMusicPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d198d51de2bbbd7b118515f4b25d51c218537572/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lwxwl/Desktop/CodeForAndroid/SimpleMusicPlayer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/lwxwl/Desktop/CodeForAndroid/SimpleMusicPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_91122635992797d3916c4b1d5374eeba1e986d3b/classes.dex" />
+    </item>
+
+</items>

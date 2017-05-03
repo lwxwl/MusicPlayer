@@ -38,7 +38,7 @@ public class BackgroundRelativeLayout extends RelativeLayout {
 
     @TargetApi(21)
     private void initLayerDrawable() {
-        Drawable backgroundDrawable = getContext().getDrawable(R.drawable.ic_blackground);
+        Drawable backgroundDrawable = getContext().getDrawable(R.drawable.ic_background);
         Drawable[] drawables = new Drawable[2];
         drawables[INDEX_BACKGROUND] = backgroundDrawable;
         drawables[INDEX_FOREGROUND] = backgroundDrawable;
